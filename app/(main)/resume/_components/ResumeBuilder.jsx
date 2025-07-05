@@ -24,7 +24,6 @@ import { entriesToMarkdown } from "@/app/lib/helper";
 import { resumeSchema } from "@/app/lib/schema";
 import MarkdownEditor from "@uiw/react-markdown-editor";
 import jsPDF from "jspdf";
-import ReactMarkdown from "react-markdown";
 
 export default function ResumeBuilder({ initialContent }) {
   const [activeTab, setActiveTab] = useState("edit");
@@ -70,7 +69,7 @@ export default function ResumeBuilder({ initialContent }) {
       const newContent = getCombinedContent();
       setPreviewContent(newContent ? newContent : initialContent);
     }
-  }, [formValues, activeTab]);
+  }, [formValues, activeTab, getCombinedContent, initialContent]);
 
   // Handle save result
   useEffect(() => {

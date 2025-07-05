@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && vite build",
+    "build": "vite build",
     "postinstall": "prisma generate",
     "start": "next start",
     "lint": "next lint"
